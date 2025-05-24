@@ -1,0 +1,55 @@
+math.html
+{% load static %}
+<html>
+<head>
+    <title>math</title>
+    <style>
+h1{
+    border:2px solid goldenrod;
+    padding:20px;
+    margin:10px;
+    border-radius: 10px;
+    position: fixed;
+    top: 20px;
+    right:575px;
+    font-size:x-large;
+    font-weight: bolder;
+    font-variant:small-caps;
+    background-color:aqua;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:chocolate;
+}
+form{
+     border:3px slategrey;
+     background-color:rgb(165, 70, 90);
+     padding:25px;
+     margin:10px;
+     border-radius: 10px;
+     width:400px;
+     position:fixed;
+     top:100px;
+     left: 600px;
+ }
+        </style>
+</head>
+ <body>
+    <h1 align="center">POWER OF A BULB</h1>
+    <form align="center" method="POST">
+     {%csrf_token%}
+            <div class="power">
+                <label><b>INTENSITY:</b></label>
+                <input type="text" name="intensity" value="{{i}}">
+                </div>
+                <div class="power"></div>
+                <label><b>RESISTANCE:</b></label>
+                <input type="text" name="resistance" value="{{r}}">
+            </div>
+            <br>
+            <input type="submit" value="COMPUTE">
+            <div class="power">
+                <label><b>POWER:</b></label>
+                   <input type="text" name="POWER" value="{{power}}">
+            </div>
+</form>
+</body>
+</html>
